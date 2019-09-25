@@ -21,18 +21,6 @@ public class ConfigClass {
     public Actor actor3(){
         return new Actor("Poorvi","Female",21);
     }
-    @Bean
-    public Movie movie1(){
-        return new Movie(actor1());
-    }
-    @Bean
-    public Movie movie2(){
-        return new Movie(actor2());
-    }
-    @Bean(name = {"MovieA","MovieB"})
-    @Scope("prototype")
-    public Movie movie3(){
-        return new Movie(actor3());
-    }
+
 
 }
