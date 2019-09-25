@@ -21,6 +21,9 @@ public class ConfigClass {
     public Actor actor3(){
         return new Actor("Poorvi","Female",21);
     }
-
+    @Bean
+    public Movie movie(){
+        return new Movie(actor3());
+    }
 
 }
