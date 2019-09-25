@@ -12,15 +12,15 @@ public class BeanLifeCycleDemoBean implements InitializingBean, DisposableBean {
     private String ab;
     @PostConstruct
     public void customInit(){
-        System.out.println("init method from bean definition is called");
+        System.out.println("init method ");
     }
     @PreDestroy
     public void customDestroy(){
-        System.out.println("destroy method from bean definition is called");
+        System.out.println("destroy method ");
     }
     @Override
     public void destroy() throws Exception {
-        System.out.println("DisposableBean interface method is called");
+        System.out.println("DisposableBean interface method ");
     }
 
     @Override
