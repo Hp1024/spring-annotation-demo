@@ -14,20 +14,15 @@ public class Main
 {
     public static void main( String[] args )
     {
-//        using Application context
         ApplicationContext context =new AnnotationConfigApplicationContext(ConfigClass.class);
-        Movie movie1=context.getBean("movie",Movie.class);
-        System.out.println("using application context");
+        Movie movie1=context.getBean("movie1",Movie.class);
         movie1.display();
-//        using BeanFactory
-        BeanFactory beanfactory= context;
-        Movie movie2=beanfactory.getBean("movie",Movie.class);
-        System.out.println("using bean factory");
+        Movie movie2=context.getBean("movie2",Movie.class);
         movie2.display();
-
-
-
-
-
+        Movie movie3=context.getBean("MovieB",Movie.class);
+        movie3.display();
+        Movie movie4=context.getBean("MovieA",Movie.class);
+        movie4.display();
+        System.out.println(movie3==movie4);
     }
 }
